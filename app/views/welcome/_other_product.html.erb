@@ -1,0 +1,23 @@
+<div class="row column">
+  <div class="callout primary">
+    <h3>Product which ends</h3>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+    <%= @product.each do |product|%>
+        <div class="medium-4 columns">
+            <div class="media-object">
+                <div class="media-object-section">
+                <img class="thumbnail" src="http://placehold.it/100x100">
+                </div>
+                <div class="media-object-section">
+                    <h5><%= link_to product.name, product_path(product) %></h5>
+                    <p>$<%= product.price %></p>
+                    <p>Now:<%= product.count_in_stock %></p>
+                </div>
+            </div> 
+        </div> 
+    <% end %>
+</div>

@@ -1,0 +1,20 @@
+
+
+<div class="row column text-center">
+  <h2>Some Chipest Products</h2>
+  <hr>
+</div>
+
+<div class="row small-up-2 medium-up-3 large-up-6">
+ <%= @product.each do |product|%>
+     <div class="column">
+         <img class="thumbnail" src="http://placehold.it/300x400">
+         <h5><%= link_to product.name, product_path(product) %></h5>
+         <p>$<%= product.price %></p>
+         <a href="#" class="button expanded">Buy</a>
+      </div>
+  <% end %>
+</div>
+
+
+<hr>

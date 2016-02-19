@@ -1,0 +1,19 @@
+<br><h3 align="center">Create new category</h1>
+<div class="row">
+    <%= form_for @category do |f| %>
+    <div class="row collapse prefix-round">
+        <div class="small-12 columns">
+            <%= f.label :name %>
+        </div>
+        <div class="small-12 columns">
+            <%= f.text_field :name, placeholder: "Category name", autofocus: true %>
+        </div>
+    </div>
+    <div class="small-12 columns">
+        <%= f.submit class: 'button postfix' %>
+    </div>
+    <% end %>
+    <div class="small-12 columns">
+        [ <%= link_to "Cancel request and return to products listing", products_path %> ]
+    </div>
+</div>

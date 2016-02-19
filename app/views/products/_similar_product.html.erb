@@ -5,13 +5,16 @@
   <hr>
 </div>
 
-
+<div>
 <div class="row medium-up-3 large-up-5">
-    <%= @product.each do |product|%>
+    
+    <% @product.each do |product|%>
     <div class="column">
         <img class="thumbnail" src="http://placehold.it/350x200">
         <h5><%= link_to product.name, product_path(product) %> <small>$<%= product.price %></small></h5>
         <a href="#" class="button hollow tiny expanded">Buy Now</a>
+        
     </div>
     <% end %>
+</div>
 </div>

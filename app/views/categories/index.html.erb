@@ -1,0 +1,12 @@
+<h3  class="text-center">Listing All Categories</h1>
+<div align="center">
+    <% @categories.each do |category| %>
+       <div class="row small-up-2 large-up-4">
+                    <div class="article-title">
+                        <%= link_to "#{category.name}", category_path(category), class: "button large expanded"%>
+                    </div>
+        </div>       
+      
+    <% end %>
+</div>
+
